@@ -18,6 +18,24 @@ let yssLogo;
 const homeButton = document.getElementById('homeBtn');
 const otherButtons = document.querySelectorAll('#downloadBtn, #aboutBtn, #discordBtn, #shaderBtn');
 
+
+
+
+window.addEventListener("orientationchange", function () {
+    location.reload();
+    window.addEventListener('load', function () {
+        var loadingScreen = document.querySelector('.loading');
+        var content = document.getElementById('content');
+
+
+        loadingScreen.style.display = 'none';
+
+
+        content.style.display = 'block';
+    });
+});
+
+
 function toggleButtonsVisibility(showOthers) {
     otherButtons.forEach(button => {
         button.style.display = showOthers ? 'block' : 'none';
@@ -320,7 +338,9 @@ function init() {
 
 
     const correctPassword = 'endermanyk';
-
+    const correctPassword2 = 'playasong';
+    const correctPassword3 = 'karl';
+    const correctPassword4 = 'mygratitude';
 
     function toggleContainers() {
         passwordForm.classList.toggle('hidden');
@@ -340,9 +360,79 @@ function init() {
             toggleContainers();
 
             passwordInput.value = '';
-        } else {
+        } else if (enteredPassword === correctPassword2) {
+            const music = document.getElementById('music');
+            music.play();
 
         }
+
+        if (enteredPassword === correctPassword3) {
+            const flashbang = document.getElementById('flashbang');
+            const flashbangSound = document.getElementById('flashbang-sound');
+            const flashbangImg = document.getElementById('flashbang-img');
+        
+            flashbangImg.style.display = 'block';
+            flashbangImg.style.animation = 'toss-flashbang 2.5s linear forwards';
+            setTimeout(() => {
+                flashbangSound.play();
+            }, 1000);
+        
+            setTimeout(() => {
+                flashbang.classList.add('flashbang-effect');
+                setTimeout(() => {
+                    flashbang.classList.remove('flashbang-effect');
+                    flashbangImg.style.display = 'none';
+                    location.reload();
+                }, 2500);
+            }, 2500);
+        }
+        
+        
+
+
+
+
+        else if (enteredPassword === correctPassword4) {
+            function createGlitchyMessage() {
+                const message = document.createElement('div');
+                message.textContent = 'toast is not the owner';
+                message.classList.add('glitch');
+                message.style.position = 'absolute';
+                message.style.left = `${Math.random() * 100}vw`;
+                message.style.top = `${Math.random() * 100}vh`;
+                message.style.color = 'red';
+                document.body.appendChild(message);
+
+
+                message.addEventListener('animationend', () => {
+                    message.parentNode.removeChild(message);
+                });
+            }
+
+
+            const numberOfMessages = 10;
+
+
+            function printMessages() {
+                for (let i = 0; i < numberOfMessages; i++) {
+                    createGlitchyMessage();
+                }
+                setTimeout(printMessages, 300);
+            }
+
+
+            printMessages();
+
+
+            setTimeout(() => {
+                location.reload();
+            }, 10000);
+
+        }
+
+
+
+
     });
 
 
