@@ -147,7 +147,7 @@ function init() {
     document.getElementById('discordBtn').addEventListener('click', () => {
 
 
-        window.location.href = 'https://discord.gg/yss';
+        window.location.href = 'https://discord.gg/years-static-shader-group-738688684223889409';
 
         hideHomeButton();
         const mouseX = 0;
