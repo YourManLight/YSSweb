@@ -1,0 +1,1332 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('Assests/Fonts/Minecraft-Bold.otf') format('opentype');
+}
+
+body {
+  font-family: 'Minecraft', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  background: #070707;
+  height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.close {
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.platform-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.platform-btn:hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+    padding: 15px;
+  }
+
+  .close {
+    font-size: 20px;
+    top: 5px;
+    right: 10px;
+  }
+
+  .platform-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-content {
+    width: 95%;
+    margin: 25% auto;
+    padding: 10px;
+  }
+
+  .close {
+    font-size: 18px;
+    top: 3px;
+    right: 5px;
+  }
+
+  .platform-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+#imageContainer5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+#imageContainer5 img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  transition: opacity 0s ease-in-out, transform 1s ease-in-out;
+}
+
+@keyframes imageSequence {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+
+  30%,
+  70% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  40%,
+  60% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+#logoImage {
+  animation: imageSequence 12s infinite;
+}
+
+#releaseImage {
+  animation: imageSequence 12s infinite;
+  animation-delay: 0s;
+}
+
+#betaImage {
+  animation: imageSequence 12s infinite;
+  animation-delay: 0s;
+}
+
+#musicImage {
+  animation: imageSequence 12s infinite;
+  animation-delay: 0s;
+}
+
+@media (max-width: 768px) {
+  #imageContainer5 img {
+    width: 150px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  #imageContainer5 img {
+    width: 100px;
+    margin: 3px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.rainbow-5:hover {
+  background-image: linear-gradient(to right,
+      #E7484F,
+      #E7484F 16.65%,
+      #F68B1D 16.65%,
+      #F68B1D 33.3%,
+      #FCED00 33.3%,
+      #FCED00 49.95%,
+      #009E4F 49.95%,
+      #009E4F 66.6%,
+      #00AAC3 66.6%,
+      #00AAC3 83.25%,
+      #732982 83.25%,
+      #732982 100%,
+      #E7484F 100%);
+  animation: slidebg 2s linear infinite;
+}
+
+
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.button-container,
+.button-container2,
+.button-container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 240px;
+}
+
+.button-container a,
+.button-container2 a,
+.button-container3 a {
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.button-container button,
+.button-container2 button,
+.button-container3 button {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  text-transform: uppercase;
+  width: 100%;
+  color: #ffffff;
+  outline: solid 2px #ff4d6d;
+  position: relative;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  background-color: transparent;
+  border: solid 2px #000;
+  border-radius: 4px;
+}
+
+.button-container button span,
+.button-container2 button span,
+.button-container3 button span {
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
+}
+
+.button-container button:hover,
+.button-container2 button:hover,
+.button-container3 button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+.button-container button:hover .visible-span,
+.button-container2 button:hover .visible-span,
+.button-container3 button:hover .visible-span {
+  transform: translateY(-400%) scale(-0.1, 20);
+}
+
+
+.effect04 {
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+  display: var(--uismLinkDisplay);
+  color: #000;
+  outline: solid 2px #000;
+  position: relative;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.effect04::before,
+.effect04 .visible-span {
+  margin: 0 auto;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
+}
+
+
+.effect04:hover {
+  background-color: #000;
+}
+
+.effect04:hover .visible-span {
+  transform: translateY(-400%) scale(-0.1, 20);
+}
+
+
+.effect04::before {
+  content: attr(data-sm-link-text);
+  color: #FFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(500%) scale(-0.1, 20);
+}
+
+.effect04:hover::before {
+  letter-spacing: 0.05em;
+  transform: translateY(0) scale(1, 1);
+}
+
+
+@media (max-width: 600px) {
+
+  .button-container,
+  .button-container2,
+  .button-container3 {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .button-container button,
+  .button-container2 button,
+  .button-container3 button {
+    font-size: 12px;
+    line-height: 35px;
+    max-width: 120px;
+  }
+}
+
+
+
+
+#Release:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #D3C5E5 0%, #735DA5 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#BETA:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #F7C5CC 0%, #CC313D 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#MUSIC:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #97BC62 0%, #2C5F2D 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+
+#YSSHALBtn:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00a2ff 0%, #003853 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#YSSRDBtn:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00a2ff 0%, #003853 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#YSSSEBtn:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00a2ff 0%, #003853 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+#BetterRD:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00a2ff 0%, #003853 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+#PatchAPP:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00f329 0%, #004b1f 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+
+#IOS:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #ffd3d3 0%, #050505 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+#canvas {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d6d;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  font-family: "Minecraft", sans-serif;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#buttons button:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  #buttons {
+    flex-direction: column;
+    gap: 2px;
+    bottom: 22px;
+  }
+
+  #buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+#buttons4patch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  bottom: 66px;
+  left: 49.5%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  max-width: 600px;
+  width: auto;
+  flex-wrap: nowrap;
+}
+
+#buttons4patch button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4d6d;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  font-family: "Minecraft", sans-serif;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  flex-shrink: 0;
+  margin: 0;
+  display: inline-flex;
+}
+
+#buttons4patch button:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  #buttons4patch {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    left: 48%;
+  }
+
+  #buttons4patch button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+body {
+  font-family: 'Minecraft', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #070707;
+}
+
+
+
+
+
+#imageTextContainer3.hidden {
+  display: none;
+}
+
+#imageTextContainer3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 150px;
+  margin: 220px auto;
+}
+
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-text img {
+  max-width: 140px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Minecraft', sans-serif;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  #imageTextContainer3 {
+    flex-direction: column;
+    gap: 10px;
+    margin: 90px auto;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .image-text img {
+    max-width: 80px;
+  }
+
+
+
+  button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+
+
+
+
+.image-container4 {
+  position: relative;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  margin: -90px auto;
+}
+
+
+#furImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+#fireImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  animation: fireAnimation 1s infinite alternate ease-in-out;
+}
+
+.ShaderLoader-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ShaderLoader {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#ShaderLoader {
+  margin-top: 30px;
+  background-color: #d82b05;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Minecraft', sans-serif;
+}
+
+
+@keyframes fireAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+@keyframes smallFireAnimation {
+  0% {
+    transform: translateY(0) scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-40px) scale(1);
+    opacity: 0;
+  }
+}
+
+
+.small-fire-image {
+  position: absolute;
+  width: 20px;
+  height: auto;
+  animation: smallFireAnimation 2s ease-in-out forwards;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .image-container4 {
+    margin: -50px auto;
+  }
+
+  #ShaderLoader {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .small-fire-image {
+    width: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container4 {
+    width: 30%;
+    max-width: none;
+    margin: -60px auto;
+  }
+
+  #ShaderLoader {
+    padding: 4px 8px;
+    font-size: 22px;
+  }
+
+  .small-fire-image {
+    width: 10px;
+  }
+}
+
+
+
+
+@keyframes waterFill {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+#BetterRD:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00a2ff 0%, #003853 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+
+#PatchAPP:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #00f329 0%, #004b1f 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+
+#IOS:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #ffd3d3 0%, #050505 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+
+
+#ShaderLoader:hover {
+  animation: waterFill 1s ease forwards;
+  background-image: linear-gradient(120deg, #e8b718 0%, #ff0000 100%);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+
+
+
+
+
+.image-container6 {
+  position: relative;
+  width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+
+  border-radius: 8px;
+
+
+  display: none;
+}
+
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+
+.password-form {
+  position: absolute;
+  bottom: 0;
+  left: 38%;
+  transform: translateX(-100%);
+  text-align: center;
+  width: 100px;
+  padding: 28px;
+  border-radius: 8px;
+}
+
+
+
+.password-form input[type="password"],
+.password-form button {
+  padding: 11px 0px;
+  font-size: 16px;
+  border: 0px solid #ffffff00;
+  background-color: #faf7f8;
+  border-radius: 1px;
+  margin: 9px 5px;
+  width: calc(100% + 11px);
+  box-sizing: border-box;
+}
+
+.password-form button {
+  background-color: #fdf8ec00;
+  color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.password-form button:hover {
+  background-color: #46009c00;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+  .image-container6 {
+    position: relative;
+    width: 320px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    bottom: 180px;
+
+    border-radius: 8px;
+
+
+    display: none;
+  }
+
+
+  .image-wrapper {
+    position: relative;
+  }
+
+  .image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+
+  .password-form {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    transform: translateX(-100%);
+    text-align: center;
+    width: 18px;
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+
+
+  .password-form input[type="password"],
+  .password-form button {
+    padding: 1px 10px;
+    font-size: 14px;
+    border: 0px solid #ffffff00;
+    background-color: #faf7f8;
+    border-radius: 1px;
+    margin: 2px 1px;
+    width: calc(100% + 30px);
+    box-sizing: border-box;
+  }
+
+  .password-form button {
+    background-color: #fdf8ec00;
+    color: #fdf8ec00;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .password-form button:hover {
+    background-color: #46009c00;
+  }
+
+}
+
+
+
+
+@keyframes popUpThrow {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-30vh) rotate(360deg) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-150vh) rotate(720deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.pop-up-throw {
+  position: fixed;
+  animation: popUpThrow 4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  width: 100px;
+  z-index: 100;
+}
+
+
+.error-shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0s 1;
+  background-color: #f44336;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
+
+
+.container {
+  font-family: 'Minecraft', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  /*background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;*/
+}
+
+.container .slide .item {
+  font-family: 'Minecraft', sans-serif;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 90%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #50505074;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slide .item:nth-child(3) {
+  left: 50%;
+}
+
+.slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+
+.slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+
+
+.item .content {
+
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+
+.content .name {
+  font-family: 'Minecraft', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+
+
+.button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background: #ababab;
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .item .content {
+    width: 80%;
+    left: 10%;
+  }
+
+  .slide .item {
+    top: auto;
+    transform: none;
+    width: 48%;
+    height: 200px;
+    margin-bottom: 2%;
+    display: inline-block;
+  }
+
+  .slide .item:nth-child(2) {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: auto;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+  }
+
+  .slide .item:nth-child(1),
+  .slide .item:nth-child(3),
+  .slide .item:nth-child(4),
+  .slide .item:nth-child(5),
+  .slide .item:nth-child(n + 6) {
+    left: 0;
+    opacity: 1;
+    left: 150%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .container .slide .item {
+    width: 100%;
+    height: 0px;
+    position: relative;
+    top: auto;
+    transform: none;
+    margin-bottom: 10px;
+    box-shadow: none;
+  }
+
+  .slide .item:nth-child(1) {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: auto;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+  }
+
+  .slide .item:nth-child(2),
+  .slide .item:nth-child(3),
+  .slide .item:nth-child(4),
+  .slide .item:nth-child(5),
+  .slide .item:nth-child(n + 6) {
+    left: 0;
+    opacity: 1;
+  }
+
+  .item .content {
+    width: 100%;
+    left: 0;
+    top: 45px;
+    text-align: center;
+    color: whitesmoke;
+  }
+
+  .content .name {
+    font-size: 24px;
+  }
+
+  .button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.container .slide .item {
+  background-color: transparent;
+}
+
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 9999;
+}
+
+.loading img {
+  animation: moveUpDown 2s ease-in-out infinite;
+  max-width: 100px;
+}
+
+@keyframes moveUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}

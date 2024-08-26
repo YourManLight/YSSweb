@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YSS</title>
+
+    <link rel="stylesheet" href="YSS.css">
+
+</head>
+
+<body>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <div class="loading">
+        <img src="Assests/Extra/load.png" alt="Loading..." />
+    </div>
+
+
+    <div class="container" style="display: none;">
+
+        <div class="slide">
+
+            <div class="item" style="background-image: url('Assests/Gallery/SE/se1.jpg');">
+                <div class="content">
+                    <div class="name">Special Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/SE/se2.jpg');">
+                <div class="content">
+                    <div class="name">Special Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/SE/se3.jpg');">
+                <div class="content">
+                    <div class="name">Special Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/SE/se4.jpg');">
+                <div class="content">
+                    <div class="name">Special Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/SE/se5.jpg');">
+                <div class="content">
+                    <div class="name">Special Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/SE/se6.jpg');">
+                <div class="content">
+                    <div class="name">Special Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/HAL/hal1.jpg');">
+                <div class="content">
+                    <div class="name">HAL Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/HAL/hal2.jpg');">
+                <div class="content">
+                    <div class="name">HAL Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/HAL/hal3.jpg');">
+                <div class="content">
+                    <div class="name">HAL Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/HAL/hal4.jpg');">
+                <div class="content">
+                    <div class="name">HAL Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/HAL/hal5.jpg');">
+                <div class="content">
+                    <div class="name">HAL Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/HAL/hal6.jpg');">
+                <div class="content">
+                    <div class="name">HAL Edition</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/RD/rd1.jpg');">
+                <div class="content">
+                    <div class="name">RenderDragon</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/RD/rd2.jpg');">
+                <div class="content">
+                    <div class="name">RenderDragon</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/RD/rd3.jpg');">
+                <div class="content">
+                    <div class="name">RenderDragon</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url('Assests/Gallery/RD/rd4.jpg');">
+                <div class="content">
+                    <div class="name">RenderDragon</div>
+                    <div class="des"></div>
+                    <!-- <button>See More</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+
+
+    <!-- <div id="debugPanel" style="position: fixed; top: 10px; right: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px;">
+        <h3>Debug Panel</h3>
+        <p>Camera Position:</p>
+        <p id="cameraPosition"></p>
+        <p>Is Locked: <span id="isLocked">false</span></p>
+        <p>Is FOV Locked: <span id="isFovLocked">false</span></p>
+    </div> -->
+
+
+
+    <div id="imageContainer5">
+        <img id="logoImage" src="Assests/Extra/yssLogo.png" alt="YSS Logo">
+        <img id="releaseImage" src="Assests/Extra/Release.png" alt="Release Image" style="display: none;">
+        <img id="betaImage" src="Assests/Extra/BETA.png" alt="BETA Image" style="display: none;">
+        <img id="musicImage" src="Assests/Extra/MUSIC.png" alt="Music Image" style="display: none;">
+    </div>
+
+
+
+
+    <div class="button-container" style="display: none;">
+        <a href="https://www.mediafire.com/file/jwjwcx32fxx9gt2/1.21.21.01_arm32_arm64_patched.apk/file"
+            target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.21.21</span>
+            </button>
+        </a>
+        <a href="https://www.mediafire.com/file/to5z0przp673rat/1.21.20.03_arm32_arm64_patched.apk/file"
+            target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.21.20</span>
+            </button>
+        </a>
+        <a href="https://www.mediafire.com/file/9qw72efpy3oi109/1.21.2.02_arm32_arm64_patched.apk/file" target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.21.2</span>
+            </button>
+        </a>
+    </div>
+
+    <div class="button-container2" style="display: none;">
+        <a href="https://discord.gg/yss" target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.21.10</span>
+            </button>
+        </a>
+        <a href="https://www.mediafire.com/file/gwrf0tf6f0dgjvj/1.20.50.21_arm64_v8a_patched.apk/file" target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.20.50</span>
+            </button>
+        </a>
+        <a href="https://www.mediafire.com/file/hu7q1fksxstwkup/1.20.40.24_arm64_v8a_patched.apk/file" target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.20.40</span>
+            </button>
+        </a>
+    </div>
+
+    <div class="button-container3" style="display: none;">
+        <a href="https://www.mediafire.com/file/1mpzfd22ix6nhd9/1.21_music.mcpack/file" target="_blank">
+            <button class="effect04" data-sm-link-text="Download">
+                <span class="visible-span">1.21</span>
+            </button>
+        </a>
+    </div>
+
+
+
+
+
+    <div id="platformModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Choose your platform:</p>
+            <button id="androidBtn" class="platform-btn">Android</button>
+            <button id="windowsBtn" class="platform-btn">Windows</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="imageContainer4" class="image-container4 hidden">
+        <div class="ShaderLoader-text">
+            <img src="Assests/Extra/fur.png" alt="Fur" id="furImage">
+            <img src="Assests/Extra/fire.png" alt="Fire" id="fireImage">
+            <button id="ShaderLoader" style="display: none;">ShaderLoader</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="imageTextContainer3" class="hidden">
+        <div class="image-text">
+            <img src="Assests/Extra/android.png" alt="Android" id="androidImage">
+            <button id="PatchAPP" style="display: none;">Patch APP</button>
+        </div>
+        <div class="image-text">
+            <img src="Assests/Extra/windows.png" alt="Windows" id="windowsImage">
+            <button id="BetterRD" style="display: none;">Better RD</button>
+        </div>
+        <div class="image-text">
+            <img src="Assests/Extra/ios.png" alt="iOS" id="iosImage">
+            <button id="IOS" style="display: none;">soon</button>
+        </div>
+    </div>
+
+
+
+
+    <div id="imageContainer6" class="image-container6">
+        <div class="image-wrapper">
+            <img src="Assests/Extra/ender.png" alt="ender" id="enderImage">
+            <div class="password-form">
+                <input type="password" id="passwordInput" placeholder="">
+                <button id="submitButton"> -</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 
+      <div id="buttons4shaderloader">
+
+        <button id="BetterRD" >Better RD</button>
+        <button id="PatchAPP" >Patch APP</button>
+        <button id="IOS" >soon</button>
+
+      </div> -->
+
+    <div id="buttons">
+        <button id="downloadBtn">ShaderLoader</button>
+        <button id="shaderBtn">Shader</button>
+        <button id="aboutBtn">About Us</button>
+        <button id="discordBtn">Join Discord</button>
+
+        <button id="YSSHALBtn" style="display: none;">YSS HAL</button>
+        <button id="YSSRDBtn" style="display: none;">YSS RD</button>
+        <button id="YSSSEBtn" style="display: none;">YSS SE</button>
+
+
+        <button id="homeBtn" style="display: none;">Home</button>
+    </div>
+    <div id="buttons4patch">
+
+
+        <button id="Release" style="display: none;">Release</button>
+        <button id="BETA" style="display: none;">BETA</button>
+        <button id="MUSIC" style="display: none;">MUSIC</button>
+        <button id="homeBtn" style="display: none;">Home</button>
+
+
+    </div>
+
+
+
+
+
+
+    <div id="canvas"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+
+    <script src="YSS.js"></script>
+</body>
+
+</html>
